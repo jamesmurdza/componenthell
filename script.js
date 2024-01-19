@@ -60,3 +60,18 @@ const searchBar = document.querySelector("#searchbar");
 searchBar.addEventListener("input", () => {
   populateGrid(searchBar.value);
 });
+
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', event => {
+      const faq = event.target.parentNode;
+      const answer = faq.querySelector('.faq-answer');
+      
+      faq.classList.toggle('open'); // Toggle the 'open' class on the FAQ
+      
+      if (faq.classList.contains('open')) {
+          answer.style.display = 'block';
+      } else {
+          answer.style.display = 'none';
+      }
+  });
+});

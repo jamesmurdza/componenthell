@@ -68,6 +68,10 @@ p {
   background: #eee;
 }
 
+.grid-item:hover {
+  border: solid yellow;
+}
+
 .grid-item .title {
   text-align: left;
   width: fill; /* Fill the width of the parent */
@@ -113,4 +117,39 @@ p {
   50% {
     color: red;
   }
+}
+
+.faq-section {
+  color: white;
+  padding: 20px;
+  margin-top: 30px;
+}
+
+.faq {
+  border-bottom: 1px solid #444;
+  cursor: pointer;
+}
+
+.faq:last-child {
+  border-bottom: none;
+}
+
+.faq-question {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.faq-answer {
+  padding: 10px;
+  display: none;
+  font-style: italic;
+}
+
+.triangle {
+  display: inline-block;
+  transform: rotate(-90deg);
+}
+
+.faq.open .triangle {
+  transform: rotate(0deg);
 }
