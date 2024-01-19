@@ -34,7 +34,7 @@ async function populateGrid(filterText = "") {
         content.classList.add("content");
 
         const link = document.createElement("a");
-        link.href = item.html_url;
+        link.href = `https://react.gitwit.dev/template/${item.name}`;
         link.target = "_blank";
 
         const screenshot = document.createElement("img");
