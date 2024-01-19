@@ -1,0 +1,116 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Consolas, Monaco, 'Lucida Console', monospace;
+  background: black;
+  letter-spacing: -2px;
+  color: #FFFFED;
+}
+
+input {
+  font-family: Consolas, Monaco, 'Lucida Console', monospace;
+  letter-spacing: -1px;
+}
+
+::placeholder {
+  color: #ddd;
+  font-weight: bold;
+  opacity: 1; /* Firefox */
+}
+
+h1 {
+  text-align: center;
+  font-size: 28px;
+  color: red;
+}
+
+p {
+  text-align: center;
+  color: white;
+  padding: 0 10px;
+}
+
+.body {
+  display: flex; /* Use flexbox to layout the sidebars and main content */
+}
+
+.sidebar {
+  width: 100px; /* Width of each sidebar */
+  color: white; /* Text color for the sidebars */
+  padding: 20px; /* Padding inside the sidebars */
+}
+
+.main-content {
+  flex-grow: 1; /* Allows the main content to fill the remaining space */
+  padding: 0; /* Padding around the main content */
+}
+
+/* Define the grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 223px); /* Adjust column width as needed */
+  row-gap: 50px;
+  column-gap: 20px;
+  justify-content: center;
+  justify-content: center; /* Center the grid items horizontally */
+  padding: 20px 10px; /* Add some padding to the grid container */
+  background: url('fire.png') no-repeat center top;
+  background-size: 100% auto;
+}
+
+/* Define the grid item styles */
+.grid-item {
+  display: flex;
+  flex-direction: column;
+  width: 223px;
+  //height: 209px;
+  border-style: outset;
+  background: #eee;
+}
+
+.grid-item .title {
+  text-align: left;
+  width: fill; /* Fill the width of the parent */
+  background: darkblue;
+  margin: 2px;
+  padding: 5px 2px 5px 5px;
+  color: white; /* Added for better visibility of the text */
+}
+
+.grid-item .title button {
+  float: right;
+  height: 22px;
+  padding: 1px 3px;
+  margin-right: 5px;
+  background: #eee;
+  border: 2px outset;
+}
+
+.grid-item .content {
+  //flex-grow: 1; /* Grow to fill available space */
+  height: 170px;
+  width: fill; /* Fill the width of the parent */
+  background: #fff;
+  margin: 2px;
+  border: 1px solid black;
+  overflow: hidden;
+  text-align: center;
+}
+
+.grid-item .content img {
+  max-height: 100%;
+}
+
+.monster {
+  width: 100%;
+}
+
+.blink {
+  animation: blinker 0.8s step-start infinite;
+}
+
+@keyframes blinker {
+  50% {
+    color: red;
+  }
+}
