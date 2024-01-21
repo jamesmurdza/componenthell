@@ -25,7 +25,23 @@ async function populateGrid(filterText = "") {
 
         const title = document.createElement("div");
         title.classList.add("title");
-        title.textContent = item.name.replace(/-/g, " ");
+
+        const image = document.createElement("img");
+        image.height = 12;
+        image.style.marginLeft = "4px";
+        image.style.marginRight = "4px";
+        image.style.marginTop= "4px";
+        image.src = `./git-icon-white.png`;
+        const a = document.createElement("a");
+        a.href = `https://www.github.com/gitwitorg/gitwit-templates/tree/main/${item.name}`;
+        a.target = "_blank";
+        a.appendChild(image);
+        title.appendChild(a);
+
+        const p = document.createElement("span");
+        p.textContent = item.name.replace(/-/g, " ");
+        title.appendChild(p);
+
         const button = document.createElement("button");
         button.textContent = "𐌢";
         title.appendChild(button);
