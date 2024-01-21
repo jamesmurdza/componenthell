@@ -66,12 +66,12 @@ document.querySelectorAll('.faq-question').forEach(question => {
       const faq = event.target.parentNode;
       const answer = faq.querySelector('.faq-answer');
       
-      faq.classList.toggle('open'); // Toggle the 'open' class on the FAQ
+      faq.classList.toggle('closed'); // Toggle the 'open' class on the FAQ
       
-      if (faq.classList.contains('open')) {
-          answer.style.display = 'block';
-      } else {
+      if (faq.classList.contains('closed')) {
           answer.style.display = 'none';
+      } else {
+          answer.style.display = 'block';
       }
   });
 });

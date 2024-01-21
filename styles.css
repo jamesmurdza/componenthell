@@ -43,6 +43,8 @@ p {
 .main-content {
   flex-grow: 1; /* Allows the main content to fill the remaining space */
   padding: 0; /* Padding around the main content */
+  background: url('fire.png') repeat-y center top;
+  background-size: 100% auto;
 }
 
 /* Define the grid container */
@@ -54,8 +56,6 @@ p {
   justify-content: center;
   justify-content: center; /* Center the grid items horizontally */
   padding: 20px 10px; /* Add some padding to the grid container */
-  background: url('fire.png') no-repeat center top;
-  background-size: 100% auto;
 }
 
 /* Define the grid item styles */
@@ -123,6 +123,7 @@ p {
   color: white;
   padding: 20px;
   margin-top: 30px;
+  background: rgb(0, 0, 0, 0.5);
 }
 
 .faq {
@@ -136,20 +137,19 @@ p {
 
 .faq-question {
   padding: 10px;
-  font-weight: bold;
+  font-weight: extra-bold;
 }
 
 .faq-answer {
   padding: 10px;
-  display: none;
-  font-style: italic;
+  display: block;
 }
 
 .triangle {
   display: inline-block;
-  transform: rotate(-90deg);
+  transform: rotate(0deg);
 }
 
 .faq.open .triangle {
-  transform: rotate(0deg);
+  transform: rotate(-90deg);
 }
